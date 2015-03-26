@@ -5,10 +5,31 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <ui:composition>
-<div class="container" data-appear-animation="bounceInRight">
-		<div class="row  center">
-			<h1 style="float: left; " class="dark"><strong>Galeria</strong></h1>
-			<div id="galeria"  class="tabs col-md-12" >
+<script  type="text/javascript">
+$(document).ready(function() {
+	 
+	  $("#owl-demo").owlCarousel({
+	 
+	      navigation : true, // Show next and prev buttons
+	      slideSpeed : 300,
+	      paginationSpeed : 400,
+	      singleItem:true
+	 
+	      // "singleItem:true" is a shortcut for:
+	      // items : 1, 
+	      // itemsDesktop : false,
+	      // itemsDesktopSmall : false,
+	      // itemsTablet: false,
+	      // itemsMobile : false
+	 
+	  });
+	 
+	});
+</script>
+<div class="container" data-appear-animation="fadeInDownBig">
+		<div class="row">
+			<h1><strong>Galeria</strong></h1>
+			<div id="galeria"  class="tabs col-md-12 center" >
 				<ul class="nav nav-tabs col-md-12" style="border: 0px;">
 					<li class="active"><a href="#15Anos" data-toggle="tab"><i class="icon icon-star"></i> 15 Anos</a></li>
 					<li><a href="#casamentos" data-toggle="tab"><i class="icon icon-female"></i><i class="icon icon-male"></i> Casamentos</a></li>
@@ -17,7 +38,7 @@
 				</ul>
 				<div class="tab-content col-md-12" style="background-color:#EEE; border-radius: 20px;">
 					<div id="15Anos" class="tab-pane active">
-						<div class="owl-carousel" data-plugin-options='{"items": 1, "singleItem": false, "autoPlay": true'>
+						<div id="owl-demo" class="owl-carousel owl-theme" data-plugin-options="{'animation':'slide', 'animationLoop': true, 'maxItems': 1}">
 							<div>
 								<img alt="" class="img-responsive" src="../resources/img/servicos/15anos.jpg"/>
 							</div>
