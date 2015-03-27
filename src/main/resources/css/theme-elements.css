@@ -2700,3 +2700,10 @@ ul.history li .featured-box .box-content {
 .parallax + .google-map {
 	margin-top: -70px;
 }
+
+
+.centralizar-vertical p{
+	vertical-align: middle;
+	position: relative; 
+	margin-top: 10% !important;
+}
